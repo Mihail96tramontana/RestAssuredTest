@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ('org.junit.jupiter:junit-jupiter:5.9.2',
+            'com.google.guava:guava:31.1-jre',
+            'com.codeborne:selenide:6.12.2',
+            'io.rest-assured:rest-assured:5.3.0')
+}
+
+test {
+    useJUnitPlatform()
+}
